@@ -62,3 +62,49 @@ $  vim Makefile
 
 
 #### 
+- - - 
+#### BlinkAppC.nc
+```c
+// NesC
+configuration BlinkAppC
+{
+}
+implementation
+{
+    components MainC, BlinkC, LedsC;
+    components new TimerMilliC() as Timer0;
+
+    BlinkC -> MainC.Boot;
+
+    BlinkC.Timer0 -> Timer0;
+    BlinkC.Leds -> LedsC;
+}
+```
+#### BlickC.nc
+```c
+// NesC
+#include "Timer.h"
+
+module BlinkC @safe()
+{
+    uses interface Timer<TMilli> as Timer();
+    uses interface Leds;
+    uses interface Boot;
+}
+implementation
+{
+    event void Boot.booted()
+    {
+        call Timer0.startPeriodic(250);
+    }
+    event void Timer0.fired()
+    {
+        call Leds.led0Toggle();
+    }
+}
+```
+#### Makefile
+```makefile
+  COMPONENT=BlinkAppC
+  include $(MAKERULES)
+```
