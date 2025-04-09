@@ -1,8 +1,7 @@
-6week
+[6week]Cygwin 설치
 ===
-### Cygwin 설치
-> Vim, Git, Gcc를 이용
-
+> intstall from internet -> Direct Connection -> https://ftp.kaist.ac.kr
+>> Vim, Git, Gcc를 이용
 1) vim (editors)
 2) git (devel)
 3) gcc (devel)
@@ -34,35 +33,11 @@ $  vim BlinkAppC.nc
 $  vim BlinkC.nc
 $  vim Makefile
 ```
-
-- - -
-#### 빅데이터의 의미
-
-#### 빅데이터의 속성(3V)
-   + 규모 (Volume)
-   + 다양성 (Variety)
-   + 속도 (Velocity)
-
-***그 외의 신뢰성, 가치정확성, 휘발성 등***
-
-#### 빅데이터의 이해
-> 빅데이터 분석의 필요성
-
-#### 빅데이터 처리 과정
-1) 수집
-    - 수집 기술
-2) 저장
-    - 저장 기술
-3) 처리
-    - 처리 기술
-4) 분석
-    - 분석 기술 : 데이터 마이닝, 협업 필터링, 텍스트 마이닝
-5) 표현
-    - 표현 기술 : 연관성 규칙 알고리즘
-
-
-#### 
 - - - 
+
+TinyOS 실습
+===
+
 #### BlinkAppC.nc
 ```c
 // NesC
@@ -108,3 +83,5 @@ implementation
   COMPONENT=BlinkAppC
   include $(MAKERULES)
 ```
+- - -
+[[6주차] - 이론](https://github.com/Jeong8537/IOT/wiki/6week)
