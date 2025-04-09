@@ -84,4 +84,6 @@ implementation
   include $(MAKERULES)
 ```
 - - -
+이론
+===
 [[6주차] - 이론](https://github.com/Jeong8537/IOT/wiki/6week)
