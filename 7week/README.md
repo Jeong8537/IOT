@@ -1,3 +1,7 @@
+이론
+===
+[7주차 이론](https://github.com/Jeong8537/IOT/wiki/7week)
+
 ```C++
 // LedToggle.h
 #ifndef LedToggle_h
