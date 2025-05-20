@@ -5,7 +5,6 @@ Arduino Uno(미세먼지 센서) ->
 
 ---
 ## influxDB
----
 ##### 1. influxDB download key using wget
 ```bash
 wget -q https://repos.influxdata.com/influxdata-archive_compat.key
@@ -35,7 +34,6 @@ $ influx
 ```
 ---
 ## Grafana 
----
 ##### 1. install pakages | Import the gpg key
 ```bash
 sudo apt-get install -y apt-transport-https software-properties-common wget
