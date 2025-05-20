@@ -1,7 +1,23 @@
 [11week] Raspberry pi(Middle Ware) 
 ===
+---
+Raspbian(OS) - > install influxDB 
 
-Arduino Uno(미세먼지 센서) -> 
+###### Grafana(localhost:3000(skip)) | Home -> Connections -> DataSources(influxdb)
+```bash
+# DataSources
+http://localhost:8086
+
+Database : dust
+User : <user_name>
+Password : <user_password>
+```
+
+###### Home -> DashBoards -> Add visibility -> influxdb
+```bash
+# Setting
+FROM dust WHERE InhaUni::tag = 2222 SELECT field(dust)
+```
 
 ---
 ## influxDB
@@ -31,6 +47,7 @@ sudo service influxdb status
 $ influx
 >create database <database_name>
 확인 : show databases
+>exit
 ```
 ---
 ## Grafana 
