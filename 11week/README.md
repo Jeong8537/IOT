@@ -59,10 +59,12 @@ sudo mkdir -p /etc/apt/keyrings/
 ```
 ##### 2. To add a repository for stable releases, run the following command
 ```bash
-wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
+wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | 
+sudo tee /etc/apt/keyrings/grafana.gpg > /dev/null
 ```
 ```bash
-echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+echo "deb [signed-by=/etc/apt/keyrings/grafana.gpg] https://apt.grafana.com stable main" | 
+sudo tee -a /etc/apt/sources.list.d/grafana.list
 ```
 ##### 3. Update the pakages | Run the following(start server)
 ```bash
