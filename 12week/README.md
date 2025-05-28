@@ -10,5 +10,3 @@ make telosb install
 TestLowOneHopSht_sc -> download(copy)
 c:\cgwin\home\(paste)
 ```
-#### 코드 에러 수정 해야함
-ILLu
