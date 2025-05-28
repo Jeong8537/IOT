@@ -10,7 +10,7 @@ module TestC
 
         interface Read<uint16_t> as Temp;
         interface Read<uint16_t> as Humi;
-        interface Read<uint16_t> as lllu;
+        interface Read<uint16_t> as Illu;
 
         interface Battery;
     }
@@ -77,9 +77,9 @@ implementation
 
     task void radioOff();
     void sendDone(){
-        call Leds.led0Off;
-        call Leds.led1Off;
-        call Leds.led2Off;
+        call Leds.led0Off();
+        call Leds.led1Off();
+        call Leds.led2Off();
         post radioOff();
     }
 
@@ -101,7 +101,7 @@ implementation
             case 1:
                 call Temp.read(); break;
             case 2:
-                call lllu.read(); break;
+                call Illu.read(); break;
             default:
                 testMsg->battery = call Battery.getVoltage();
                 post sendTask;
@@ -118,8 +118,8 @@ implementation
         testMsg->Humi = error == SUCCESS ? val : 0xFFFB;
         post readTask();
     }
-    event void lllu.readDone(error_t errorm uint16_t val){
-        testMsg->lllu = error == SUCCESS ? val : 0xFFFC;
+    event void Illu.readDone(error_t errorm uint16_t val){
+        testMsg->Illu = error == SUCCESS ? val : 0xFFFC;
         post readTask();
     }
 }

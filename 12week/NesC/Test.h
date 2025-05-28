@@ -1,6 +1,7 @@
 #ifndef TEST_H
 #define TEST_H
 #include "message.h"
+
 enum {
     TEST_PERIOD = 10240LU,
 };
@@ -18,9 +19,9 @@ typedef nx_struct test_data_msg {
     nx_am_addr_t srcID;
     nx_uint32_t seqNo;
     nx_uint16_t type;
-    nx_unit16_t Temp;
+    nx_uint16_t Temp;
     nx_uint16_t Humi;
-    nx_uint16_t lllu;
+    nx_uint16_t Illu;
     nx_uint16_t battery;
     //nx_uint8_t testData[TEST_DATA_LENGTH];
 } test_data_msg_t;
